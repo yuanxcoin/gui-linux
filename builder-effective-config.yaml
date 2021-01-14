@@ -1,0 +1,43 @@
+directories:
+  output: /home/xazab/gui/GUI/loki-electron-gui-wallet/dist/electron/Packaged
+  buildResources: /home/xazab/gui/GUI/loki-electron-gui-wallet/src-electron
+  app: /home/xazab/gui/GUI/loki-electron-gui-wallet/dist/electron/UnPackaged
+appId: com.gyuanx.electron-wallet
+productName: Gyuanx Electron Wallet
+copyright: 'Copyright © 2018-2021 Gyuanx, 2018 Ryo Currency Project'
+afterSign: build/notarize.js
+artifactName: 'gyuanx-electron-wallet-${version}-${os}.${ext}'
+publish: github
+linux:
+  target:
+    - AppImage
+    - deb
+  icon: src-electron/icon.png
+  category: Finance
+mac:
+  target:
+    - dmg
+    - zip
+  icon: src-electron/icons/icon.icns
+  category: public.app-category.finance
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  entitlements: build/entitlements.mac.plist
+  entitlementsInherit: build/entitlements.mac.plist
+dmg:
+  background: src-electron/build/gyuanx-dmg.tiff
+  sign: false
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+files:
+  - filter:
+      - '!build/*.js'
+      - '!.env'
+      - '!dev-app-update.yml'
+      - '!downloads/**'
+      - '!dist/**'
+extraResources:
+  - filter:
+      - bin
+electronVersion: 4.2.12

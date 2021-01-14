@@ -1,0 +1,9 @@
+version: 1.5.6
+files:
+  - url: gyuanx-electron-wallet-1.5.6-linux.AppImage
+    sha512: E6OogfSwFeVyRHcfUBjjOILOcoy66pzw4KtpTPWjZvzuMIuI9JSOBdHzW4Y28+fNoPrvonKX5pmapAgOAPDFTw==
+    size: 80153646
+    blockMapSize: 85058
+path: gyuanx-electron-wallet-1.5.6-linux.AppImage
+sha512: E6OogfSwFeVyRHcfUBjjOILOcoy66pzw4KtpTPWjZvzuMIuI9JSOBdHzW4Y28+fNoPrvonKX5pmapAgOAPDFTw==
+releaseDate: '2021-01-14T15:25:52.206Z'
